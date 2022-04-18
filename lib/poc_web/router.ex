@@ -7,6 +7,8 @@ defmodule PocWeb.Router do
 
   scope "/api", PocWeb do
     pipe_through :api
+
+    get "/health", HealthcheckController, :index
   end
 
   # Enables LiveDashboard only for development
